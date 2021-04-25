@@ -23,35 +23,35 @@ public class ExerciseGenericsEnums {
         HIGH, MEDIUM, LOW
     }
 
-//    private static class FavoriteClasses {
-//        private favorite1;
-//        private favorite2;
-//        private favorite3;
-//
-//        FavoriteClasses(fav1, fav2, fav3) {
-//            this.favorite1 = fav1;
-//            this.favorite2 = fav2;
-//            this.favorite3 = fav3;
-//        }
-//
-//        public getFav1() {
-//            return (this.favorite1);
-//        }
-//
-//        public getFav2() {
-//            return (this.favorite2);
-//        }
-//
-//        public getFav3() {
-//            return (this.favorite3);
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        List r = new ArrayList();
-//        r.add(6.3);
-//        r.add(5.9);
-//        FavoriteClasses a = new FavoriteClasses("Hello", 67, r.get(0));
-//        System.out.println("My favorites are " + a.getFav1() + ", " + a.getFav2() + ", and " + a.getFav3() + ".");
-//    }
+    private static class FavoriteClasses<T> {
+        private T favorite1;
+        private T favorite2;
+        private T favorite3;
+
+        FavoriteClasses(T fav1, T fav2, T fav3) {
+            this.favorite1 = fav1;
+            this.favorite2 = fav2;
+            this.favorite3 = fav3;
+        }
+
+        public T getFav1() {
+            return (this.favorite1);
+        }
+
+        public T getFav2() {
+            return (this.favorite2);
+        }
+
+        public T getFav3() {
+            return (this.favorite3);
+        }
+    }
+
+    public static void main(String[] args) {
+        List r = new ArrayList();
+        r.add(6.3);
+        r.add(5.9);
+        FavoriteClasses a = new FavoriteClasses("Hello", 67, r.get(0));
+        System.out.println("My favorites are " + a.getFav1() + ", " + a.getFav2() + ", and " + a.getFav3() + ".");
+    }
 }
