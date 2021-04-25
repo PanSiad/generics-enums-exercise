@@ -23,6 +23,22 @@ public class ExerciseGenericsEnums {
         HIGH, MEDIUM, LOW
     }
 
+    private enum ProgrammingLanguage {
+
+        C("C"), JAVA("Java"), PYTHON("Python"), SWIFT("Swift");
+
+        private String name;
+
+        //Custom constructor for enum Programming language with local variable name
+        ProgrammingLanguage(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+    }
+
     private static class FavoriteClasses<T> {
         private T favorite1;
         private T favorite2;
@@ -53,5 +69,10 @@ public class ExerciseGenericsEnums {
         r.add(5.9);
         FavoriteClasses a = new FavoriteClasses("Hello", 67, r.get(0));
         System.out.println("My favorites are " + a.getFav1() + ", " + a.getFav2() + ", and " + a.getFav3() + ".");
+
+
+        //sout two constants of enum Programming Language accessed by enum.name and by enum.valueof
+        System.out.println("My favourite programming languages are " + ProgrammingLanguage.valueOf("JAVA").getName() + " and " + ProgrammingLanguage.C.getName());
     }
+
 }
