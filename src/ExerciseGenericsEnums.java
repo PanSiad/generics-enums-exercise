@@ -42,6 +42,10 @@ public class ExerciseGenericsEnums {
                     "languageName='" + languageName + '\'' +
                     '}';
         }
+
+        public String getLanguageName() {
+            return languageName;
+        }
     }
     //Exercise 4 end
 
@@ -96,6 +100,6 @@ public class ExerciseGenericsEnums {
         myProgrammingLanguages.add(ProgrammingLanguage.C);
         myProgrammingLanguages.add(ProgrammingLanguage.valueOf("JAVA"));
 
-        System.out.println(myProgrammingLanguages.toString() + " and " + ProgrammingLanguage.KOTLIN.languageName);
+        System.out.println(myProgrammingLanguages.toString() + " and " + ProgrammingLanguage.KOTLIN.getLanguageName());
     }
 }
